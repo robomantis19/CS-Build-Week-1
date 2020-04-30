@@ -156,7 +156,16 @@ Note that all the Pusher parts are stretch.
 
 * Add rooms to your database
   * `./manage.py shell`
-  * Copy/paste the contents of `util/create_world.py` into the Python interpreter
+ 
+  # To add contents from sample_generator map to database, 
+  # should see a map and numbers printed out.
+  * `from util.sample_generator import *`
+
+  # to see objects in database.
+  * >>> from adventure.models import Room
+  * >>> r = Room.objects.all()
+  * >>> r
+  
   * Exit the interpreter
 
 * Run the server
